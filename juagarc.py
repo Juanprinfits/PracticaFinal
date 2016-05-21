@@ -18,10 +18,13 @@ class juego:
 		self.ventana = gtk.Window(gtk.WINDOW_TOPLEVEL)                  #crea ventana y la pone por encima
 		self.ventana.set_border_width(100)								#pone el tamaño de la ventana
 		tablero=gtk.Table(filas,columnas, homogeneous=True)
-		boton=gtk.Button("1")
-		boton1=gtk.Button("2")
-		tablero.attach(boton,0,1,0,1)
-		tablero.attach(boton1,1,2,0,1)
+		botones = []
+		for i in range(len(botones)):#imprime letras en orden          
+			for j in range(len(botones[0])):
+				botones[i] = [gtk.Button[str(i)] * columnas+4
+				h = filas%i
+				table.attach(botones[i], i,i+1, y,y+1)
+				botones[i].show()
 		self.ventana.add(tablero)
 		self.ventana.show_all()
 		
