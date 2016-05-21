@@ -22,7 +22,7 @@ class juego:
 		for i in range(len(botones)):#imprime letras en orden          
 			for j in range(len(botones[0])):
 				botones[i] = [gtk.Button[str(i)] * columnas+4
-				h = filas%i
+				y = filas%i
 				table.attach(botones[i], i,i+1, y,y+1)
 				botones[i].show()
 		self.ventana.add(tablero)
